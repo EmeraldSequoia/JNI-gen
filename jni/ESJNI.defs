@@ -1,0 +1,66 @@
+class android/app/Activity
+    isa android/content/Context
+    method getPreferences(I)Landroid/content/SharedPreferences;
+    method findViewById(I)Landroid/view/View;
+    method getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    method getFilesDir()Ljava/io/File;
+    method getAssets()Landroid/content/res/AssetManager;
+    castok android/location/LocationListener   # We presume that we're implementing this interface in our specific app activity
+endclass
+class android/content/res/AssetManager
+    method openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;    
+endclass
+class android/content/res/AssetFileDescriptor
+    method getStartOffset()J
+    method getLength()J
+    method getFileDescriptor()Ljava/io/FileDescriptor;
+endclass
+class java/io/FileDescriptor
+    field fd:I
+    field descriptor:I
+endclass
+class android/content/SharedPreferences
+    method getBoolean(Ljava/lang/String;Z)Z
+    method getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    method edit()Landroid/content/SharedPreferences$Editor;
+endclass
+class android/content/SharedPreferences$Editor
+    method putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    method putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    method apply()V
+endclass
+class java/util/Locale
+    smethod getDefault()Ljava/util/Locale;
+    method getCountry()Ljava/lang/String;
+endclass
+class java/io/File
+    method getPath()Ljava/lang/String;
+endclass
+class android/widget/TextView
+    isa android/view/View
+    method getText()Ljava/lang/CharSequence;
+    method setText(Ljava/lang/CharSequence;)V
+endclass
+class java/lang/CharSequence
+    friend ESJNI_java_lang_String
+    method toString()Ljava/lang/String;
+endclass
+class android/view/View
+    castok android/widget/TextView
+endclass
+class android/location/Location
+    method getAccuracy()F
+    method getTime()J
+    method getLatitude()D
+    method getLongitude()D
+endclass
+class android/location/LocationManager
+    method getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
+    method requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
+    method removeUpdates(Landroid/location/LocationListener;)V
+endclass
+class java/lang/Object
+    castok android/location/LocationManager
+endclass
+class android/location/LocationListener
+endclass
