@@ -1,8 +1,7 @@
 //
 //  ESJNI.hpp
 //
-//  Created by Steve Pucci 08 Jun 2011
-//  Copyright Emerald Sequoia LLC 2011. All rights reserved.
+//  Copyright Emerald Sequoia LLC 2011.
 //
 
 #ifndef _ESJNI_HPP_

@@ -1,8 +1,7 @@
 //
 //  ESJNI.cpp
 //
-//  Created by Steve Pucci 09 Jun 2011
-//  Copyright Emerald Sequoia LLC 2011. All rights reserved.
+//  Copyright Emerald Sequoia LLC 2011.
 //
 
 #include "ESJNI.hpp"
