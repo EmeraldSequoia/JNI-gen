@@ -8,7 +8,7 @@ class android/app/Activity
     castok android/location/LocationListener   # We presume that we're implementing this interface in our specific app activity
 endclass
 class android/content/res/AssetManager
-    method openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;    
+    method openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 endclass
 class android/content/res/AssetFileDescriptor
     method getStartOffset()J
